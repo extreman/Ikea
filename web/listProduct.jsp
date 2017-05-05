@@ -13,21 +13,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <title>Lista producto</title>
     </head>
     <body>
         <header>
-            <%@include file="../html/cabecera.html"%>
+            <%@include file="html/cabecera.html"%>
         </header>
-        <h1>Lista producto</h1>
-        <%@include file="../html/inicio.html" %>
+        <h2>LISTA PRODUCTO</h2>
+        <%@include file="html/inicio.html" %>
+        <br>
         <table>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Precio</th>
+            <tr class="list">
+                <th class="list">Id</th>
+                <th class="list">Nombre</th>
+                <th class="list">Descripción</th>
+                <th class="list">Precio</th>
             </tr>
         <%
             ObjectInputStream ois;
@@ -36,11 +37,11 @@
                 Producto aux = (Producto) f.leerObjeto();
                 while(aux!=null){
                     
-                    respuesta+="<tr>\n"
-                            + "<td>"+aux.getId()+"</td>\n"
-                            + "<td>"+aux.getNombre()+"<td>\n"
-                            + "<td>"+aux.getDescripcion()+"</td>\n"
-                            + "<td>"+aux.getPrecio()+"</td>\n"
+                    respuesta+="<tr class='list'>\n"
+                            + "<td class='list'>"+aux.getId()+"</td>\n"
+                            + "<td class='list'>"+aux.getNombre()+"</td>\n"
+                            + "<td class='list'>"+aux.getDescripcion()+"</td>\n"
+                            + "<td class='list'>"+aux.getPrecio()+"</td>\n"
                             + "</tr>\n";
                     //respuesta+=aux.toString();
                    

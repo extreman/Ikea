@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <title>Inserta Producto</title>
     </head>
     <%
@@ -26,7 +26,7 @@
             
             
             try{
-                Fichero f = new Fichero("fichero.bin","ab");
+                Fichero f = new Fichero("almacen.bin","ab");
                 id = Integer.parseUnsignedInt(request.getParameter("id"));
                 precio = Double.parseDouble(request.getParameter("precio"));
                 if(nombre==null 
@@ -50,11 +50,11 @@
         %>
     <body>
         <header>
-            <%@include file="../html/cabecera.html"%>
+            <%@include file="html/cabecera.html"%>
         </header>
-        <h1>Inserta producto</h1>
-        <%@include file="../html/inicio.html"%>
-        <h2>Formulario</h2>
+        <h2>INSERTA PRODUCTO</h2>
+        <%@include file="html/inicio.html"%>
+        <h3>Formulario</h3>
         <form action="insertProduct.jsp" method="POST">
          <table>
             <tr>

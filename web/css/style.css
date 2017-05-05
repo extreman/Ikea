@@ -9,9 +9,17 @@ and open the template in the editor.
 */
 html {background: #003399;
       color: #ffcc00}
-a {color: #ffcc00}
-H2 {color: black}
-input {border-radius: 5px}
+section {padding: center}
+a {color: black}
+H2 {color: #ffcc00}
+H3 {color: black}
+input.button {border-radius: 5px}
 textarea {border-radius: 5px}
-th {text-align: left}
+.list {color: black;
+       background: white;
+       border: black solid 1px;
+       border-collapse: collapse}
+th {text-align: left;
+    color: #ffcc00}
+
 

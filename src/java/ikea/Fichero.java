@@ -72,6 +72,7 @@ public class Fichero {
     public Fichero(String nombre, String modoApertura) 
             throws AperturaFicheroExcepcion{
         this.f = new File(nombre);
+        //System.err.println(this.f.getAbsolutePath());
         switch(modoApertura){ 
             case "wb": //Modo 1
                 this.modo=1;

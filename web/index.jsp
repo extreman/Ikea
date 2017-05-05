@@ -17,11 +17,10 @@
         <header>
             <%@include file="html/cabecera.html"%>
         </header>
+           <section>
             <h1>PRODUCTOS IKEA</h1>
-            <h2>Opciones de productos</h2>
-            <ul>
-                <li><a href="jsp/insertProduct.jsp">Añadir productos</a></li>
-                <li><a href="jsp/listProduct.jsp">Listado de productos</a></li>
-            </ul>       
+            <button onclick="window.open('insertProduct.jsp')">AÑADIR PRODUCTOS</button>
+            <button onclick="window.open('listProduct.jsp')">LISTAR PRODUCTOS</button>  
+           </section>
     </body>
 </html>
