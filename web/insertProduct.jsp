@@ -52,9 +52,9 @@
         <header>
             <%@include file="html/cabecera.html"%>
         </header>
+        <section>
         <h2>INSERTA PRODUCTO</h2>
         <%@include file="html/inicio.html"%>
-        <h3>Formulario</h3>
         <form action="insertProduct.jsp" method="POST">
          <table>
             <tr>
@@ -72,7 +72,7 @@
             </tr>
             <tr>
                 <th>Precio:</th>
-                <td><input type="number" name="precio"></td>
+                <td><input type="number" name="precio" width="1000"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Enviar"></td>
@@ -80,6 +80,7 @@
             </tr>
          </table>  
         </form>
-        <p><%=respuesta%></p>           
+        <p><%=respuesta%></p>
+        </section>
     </body>
 </html>
