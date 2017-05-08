@@ -20,15 +20,16 @@
         <header>
             <%@include file="html/cabecera.html"%>
         </header>
+        <section>
         <h2>LISTA PRODUCTO</h2>
         <%@include file="html/inicio.html" %>
         <br>
         <table>
             <tr class="list">
-                <th class="list">Id</th>
-                <th class="list">Nombre</th>
-                <th class="list">Descripción</th>
-                <th class="list">Precio</th>
+                <th class="lista">Id</th>
+                <th class="lista">Nombre</th>
+                <th class="lista">Descripción</th>
+                <th class="lista">Precio</th>
             </tr>
         <%
             ObjectInputStream ois;
@@ -53,6 +54,7 @@
         %>
         <%=respuesta%>
        </table>
+       </section>
     </body>
 </html>
 

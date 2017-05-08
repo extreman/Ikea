@@ -9,17 +9,24 @@ and open the template in the editor.
 */
 html {background: #003399;
       color: #ffcc00}
-section {padding: center}
+section {text-align: center}
+header {text-align: center}
+table {margin: 0 auto}
 a {color: black}
 H2 {color: #ffcc00}
-H3 {color: black}
-input.button {border-radius: 5px}
+input{border-radius: 5px;
+       text-align: left;
+       width: 150px}
 textarea {border-radius: 5px}
 .list {color: black;
        background: white;
        border: black solid 1px;
        border-collapse: collapse}
-th {text-align: left;
-    color: #ffcc00}
+.lista{color: black;
+       background: #ffcc00;
+       border: black solid 1px;
+       border-collapse: collapse;
+       text-align: center}
+th {text-align: left}
 
 

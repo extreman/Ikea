@@ -72,7 +72,7 @@
             </tr>
             <tr>
                 <th>Precio:</th>
-                <td><input type="number" name="precio" width="1000"></td>
+                <td><input type="number" name="precio"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Enviar"></td>
