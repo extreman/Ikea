@@ -8,6 +8,8 @@ package ikea;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -63,6 +65,45 @@ public class Producto implements Serializable {
         this.precio = precio;
     }
 
+
+/**
+     * Convierte un ArrayList de Object a uno de Producto
+     * @param obj ArrayList<Object> - El ArrayList a convertir
+     * @return ArrayList<Producto> - El ArrayList convertido
+     */
+    public static ArrayList<Producto> ObjectoAProducto(ArrayList<Object> obj){
+        ArrayList<Producto> listado = new ArrayList<>();
+        obj.forEach((objeto) -> {
+            listado.add((Producto)objeto);
+        });
+        return listado;
+    }
+    
+    public static List ObjetoAProducto(List obj){
+        List listado = new ArrayList();
+        for(Object objeto: obj){
+            listado.add((Producto) objeto);
+        }
+        return listado;
+    }
+    
+    public static ArrayList<Object> ProductoAObjeto(ArrayList<Producto> productos){
+        ArrayList<Object> listado = new ArrayList<>();
+        productos.forEach((producto) -> {
+            listado.add((Object)producto);
+        });
+        return listado;
+    }
+    
+    public static List ProductoAObjeto(List<Producto> productos){
+        List listado = new ArrayList();
+        for(Producto pro: productos){
+            listado.add((Object) pro);
+        }
+        return listado;
+    }
+
   
 }
+
 

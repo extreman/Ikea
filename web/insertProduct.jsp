@@ -57,6 +57,7 @@
         <%@include file="html/inicio.html"%>
         <form action="insertProduct.jsp" method="POST">
          <table>
+           <div id="formu">  
             <tr>
                 <th>Id:</th>
                 <td><input type="number" name="id"></td>
@@ -78,6 +79,7 @@
                 <td><input type="submit" value="Enviar"></td>
                 <td><input type="reset" value="Reset"></td>
             </tr>
+           </div>
          </table>  
         </form>
         <p><%=respuesta%></p>

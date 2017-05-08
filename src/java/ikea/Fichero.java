@@ -12,17 +12,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
-class AperturaFicheroExcepcion extends Exception{
-    public AperturaFicheroExcepcion(String mensaje){
-        super(mensaje);
-    }
-}
-class CierreFicheroExcepcion extends Exception{
-    public CierreFicheroExcepcion(String mensaje){
-        super(mensaje);
-    }
-}
+
 
 class MiObjectOutputStream extends ObjectOutputStream
 {
@@ -72,7 +65,6 @@ public class Fichero {
     public Fichero(String nombre, String modoApertura) 
             throws AperturaFicheroExcepcion{
         this.f = new File(nombre);
-        //System.err.println(this.f.getAbsolutePath());
         switch(modoApertura){ 
             case "wb": //Modo 1
                 this.modo=1;
@@ -157,6 +149,62 @@ public class Fichero {
             
         }
         return objeto;
+    }
+    
+    public ArrayList<Object> leerTodos(){
+        ArrayList<Object> listado = new ArrayList<>();
+        try{
+            Object obj = this.ois.readObject();
+            while(obj!=null){
+                listado.add(obj);
+                obj=this.ois.readObject();
+            }
+        }catch(IOException | ClassNotFoundException io){
+            
+        }
+        return listado;
+    }
+    
+    public List leerTodosAntiguo(){
+        List listado = new ArrayList();
+        try{
+            Object obj = this.ois.readObject();
+            while(obj!=null){
+                listado.add(obj);
+                obj=this.ois.readObject();
+            }
+        }catch(IOException | ClassNotFoundException io){
+            
+        }
+        return listado;
+    }
+    
+    public void escribirTodos(ArrayList<Object> obj){
+        try{
+            for(Object objeto : obj)
+            {
+                if(this.existiaFichero)
+                    this.moos.writeObject(objeto);
+                else
+                    this.oos.writeObject(objeto);
+            }
+        }catch(IOException io){
+            
+        }
+    }
+    
+    public void escribirTodos(List obj){
+        try{
+            for(Object objeto : obj)
+            {
+                if(this.existiaFichero)
+                    this.moos.writeObject(objeto);
+                else
+                    this.oos.writeObject(objeto);
+            }
+        }catch(IOException io){
+            
+        }
     }
     
     public void close() throws CierreFicheroExcepcion{
