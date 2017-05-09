@@ -19,11 +19,11 @@
         </header>
            <section>
             <h1>PRODUCTOS IKEA</h1>
-            <button onclick="window.open('insertProduct.jsp')">AÑADIR PRODUCTOS</button><br>
+            <button onclick="location='insertProduct.jsp'">AÑADIR PRODUCTOS</button><br>
             <br>
-            <button onclick="window.open('listProduct.jsp')">LISTAR PRODUCTOS</button><br>
+            <button onclick="location='listProduct.jsp'">LISTAR PRODUCTOS</button><br>
             <br>
-            <button onclick="window.open('borrarProducto.jsp')">BORRAR PRODUCTO</button>
+            <button onclick="location='borrarProducto.jsp'">BORRAR PRODUCTO</button>
            </section>
     </body>
 </html>
