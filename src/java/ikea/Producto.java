@@ -19,10 +19,10 @@ public class Producto implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    String nombre;
-    String descripcion;
-    int id;
-    double precio;
+    private String nombre;
+    private String descripcion;
+    private int id;
+    private double precio;
     public Producto(int id, String nombre, String descripcion, double precio) {
       this.id = id;
       this.nombre = nombre;
@@ -79,13 +79,13 @@ public class Producto implements Serializable {
         return listado;
     }
     
-    public static List ObjetoAProducto(List obj){
+    /*public static List ObjetoAProducto(List obj){
         List listado = new ArrayList();
         for(Object objeto: obj){
             listado.add((Producto) objeto);
         }
         return listado;
-    }
+    }*/
     
     public static ArrayList<Object> ProductoAObjeto(ArrayList<Producto> productos){
         ArrayList<Object> listado = new ArrayList<>();
@@ -95,13 +95,13 @@ public class Producto implements Serializable {
         return listado;
     }
     
-    public static List ProductoAObjeto(List<Producto> productos){
+    /*public static List ProductoAObjeto(List<Producto> productos){
         List listado = new ArrayList();
         for(Producto pro: productos){
             listado.add((Object) pro);
         }
         return listado;
-    }
+    }*/
 
   
 }
